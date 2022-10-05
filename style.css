@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --primery-softBlue: hsl(215, 51%, 70%);
+  --primery-cyan: hsl(178, 100%, 50%);
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --lineClr: hsl(215, 32%, 27%);
+  --whiteClr: hsl(0, 0%, 100%);
+  --p-size: 18px;
+  --font: "Outfit", sans-serif;
+  --transition: all 0.4s linear;
+}
+
+/*
+======
+Global
+======
+*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--mainBG);
+}
+
+/*
+======
+Card and Image
+======
+*/
+
+.card {
+  /* margin: 0 auto;*/
+  background: var(--cardBG);
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3%;
+  box-shadow: 0 25px 10px 15px #0c1729;
+  padding: 2rem;
+}
+
+.image-con {
+  border-radius: 3%;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.main-img {
+  width: 100%;
+  display: block;
+
+  border-radius: 4%;
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+.eye-icon {
+  font-size: 4rem;
+  color: var(--whiteClr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.image-con:hover {
+  background: var(--primery-cyan);
+}
+
+.image-con:hover .main-img {
+  opacity: 0.4;
+}
+
+.image-con:hover .eye-icon {
+  opacity: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .card {
+    max-width: 550px;
+  }
+}
+
+/*
+======
+INFO
+======
+*/
+
+h1 {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: var(--whiteClr);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.p-info {
+  margin-top: 25px;
+  color: var(--primery-softBlue);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .p-info {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+  .p-info {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+}
+
+h1:hover {
+  color: var(--primery-cyan);
+}
+
+/*
+======
+ICONS
+======
+*/
+
+.eth-days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.text-eth {
+  color: var(--primery-cyan);
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  .text-eth {
+    font-size: 1.3rem;
+    bottom: 30px;
+  }
+  .eq-icon {
+    width: 30;
+    height: 40;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .eth-days {
+    margin-top: 30px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.text-days {
+  color: var(--primery-softBlue);
+  font-size: 0.8rem;
+  align-content: center;
+}
+
+@media screen and (min-width: 1100px) {
+  .text-days {
+    font-size: 1.3rem;
+  }
+}
+
+/*
+======
+Footer
+======
+*/
+
+hr {
+  border: 1px solid var(--lineClr);
+  margin-top: 25px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.avatar-img {
+  width: 35px;
+  border: 1px solid var(--whiteClr);
+  border-radius: 50%;
+}
+
+.p-footer {
+  font-size: 0.8rem;
+  align-self: center;
+  margin: 0;
+  margin-left: 15px;
+  color: var(--primery-softBlue);
+  word-spacing: 1px;
+}
+
+.name {
+  color: var(--whiteClr);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.name:hover {
+  color: var(--primery-cyan);
+}
+
+@media screen and (min-width: 1100px) {
+  .avatar-img {
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .p-footer {
+    font-size: 1.5rem;
+  }
+}
